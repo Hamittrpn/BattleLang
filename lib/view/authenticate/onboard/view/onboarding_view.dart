@@ -10,8 +10,8 @@ import '../../../../core/extensions/context_extension.dart';
 import '../../../../core/init/lang/locale_keys.g.dart';
 import '../viewmodel/onboarding_viewmodel.dart';
 
-class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({Key? key}) : super(key: key);
+class OnBoardingView extends StatelessWidget {
+  const OnBoardingView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BaseView<OnBoardingViewModel>(
@@ -20,8 +20,8 @@ class OnBoardingScreen extends StatelessWidget {
         model.setContext(context);
       },
       onPageBuilder: (BuildContext context, OnBoardingViewModel viewModel) =>
-          SafeArea(
-        child: IntroductionScreen(
+          Scaffold(
+        body: IntroductionScreen(
           pages: [
             PageViewModel(
               title: LocaleKeys.onboard_title1.tr(),

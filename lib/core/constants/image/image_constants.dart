@@ -6,7 +6,7 @@ class ImageConstants {
   ImageConstants._init();
 
   //png
-  String get splashImage1 => toPng("splash_image");
+  String get splashImage => toPng("ic_splash_400");
 
   //svg
   String get onboardImage1 => toSVG("ic_onboarding1");
