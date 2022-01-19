@@ -1,0 +1,15 @@
+{
+    "splash": {
+        "welcome": "WELCOME TO GOOD LANGUAGE"
+    },
+    "onboard": {
+        "title1": "Learn with Friend",
+        "body1": "Arkadaşlarını davet et, ekle ve yabancı dil bilgini birlikte geliştir.",
+        "title2": "Start Challengs",
+        "body2": "Birbirinden rekabetçi yarışlar oluştur, puanları topla, dil bilgini geliştir. Arkadaşların ile ezeli rekabete başla.",
+        "title3": "Wake Up",
+        "body3": "Artık sabahları yeni şeyler öğrenerek uyan! Alarmını kur, kelime setlerini oluştur. Öğrenmeye başla.",
+        "ready": "Let's Start"
+
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "splash": {
+        "welcome": "XXX'e Hoşgeldiniz"
+    },
+    "onboard": {
+        "title1": "Arkadaşlarınla Öğren",
+        "body1": "Arkadaşlarını davet et, ekle ve yabancı dil bilgini birlikte geliştir.",
+        "title2": "Yarışlar Başlat",
+        "body2": "Birbirinden rekabetçi yarışlar oluştur, puanları topla, dil bilgini geliştir. Arkadaşların ile ezeli rekabete başla.",
+        "title3": "Uykunu Kaçırabiliriz",
+        "body3": "Artık sabahları yeni şeyler öğrenerek uyan! Alarmını kur, kelime setlerini oluştur. Öğrenmeye başla.",
+        "ready": "Hadi Başlayalım"
+    }
+}
