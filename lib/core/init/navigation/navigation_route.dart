@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learn_language/view/authenticate/auth/view/auth_view.dart';
+import 'package:learn_language/view/authenticate/register/view/verify_email_view.dart';
 import 'package:learn_language/view/authenticate/splash/view/splash_view.dart';
 
 import '../../../view/authenticate/onboard/view/onboarding_view.dart';
@@ -18,8 +20,12 @@ class NavigationRoute {
         return normalNavigate(const SplashView());
       case NavigationConstants.ON_BOARDING_VIEW:
         return normalNavigate(const OnBoardingView());
+      case NavigationConstants.AUTH_VIEW:
+        return normalNavigate(const AuthView());
+      case NavigationConstants.EMAIL_VERIFIED:
+        return normalNavigate(const VerifyEmailView());
       case NavigationConstants.TEST_VIEW:
-        return normalNavigate(const TestScreen());
+        return normalNavigate(const TestView());
       default:
         return MaterialPageRoute(
           builder: (context) => const NotFoundNavigationCard(),

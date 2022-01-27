@@ -53,3 +53,11 @@ extension PaddingExtensionScreenDefault on BuildContext {
       const EdgeInsets.symmetric(vertical: 16);
   EdgeInsets get paddingAllDefaultScreen => const EdgeInsets.all(16);
 }
+
+extension PaddingExtensionFormField on BuildContext {
+  EdgeInsets get paddingHorizontalForm =>
+      const EdgeInsets.symmetric(horizontal: 12);
+  EdgeInsets get paddingVerticalForm =>
+      const EdgeInsets.symmetric(vertical: 12);
+  EdgeInsets get paddingAllForm => const EdgeInsets.all(12);
+}

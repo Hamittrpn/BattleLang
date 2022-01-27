@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
@@ -13,11 +14,16 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
   void setContext(BuildContext context) => this.context = context;
   @override
   void init() {
+    _firebaseInit();
     controlAppState();
   }
 
   Future<void> controlAppState() async {
     await Future.delayed(const Duration(seconds: 2));
     navigation.navigateToPageClear(NavigationConstants.ON_BOARDING_VIEW, null);
+  }
+
+  Future<void> _firebaseInit() async {
+    await Firebase.initializeApp();
   }
 }
