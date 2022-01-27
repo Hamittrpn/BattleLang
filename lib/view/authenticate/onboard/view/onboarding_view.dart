@@ -49,8 +49,8 @@ class OnBoardingView extends StatelessWidget {
             ),
           ],
           dotsDecorator: getDotDecoration(context),
-          color: context.colors.secondary,
-          globalBackgroundColor: context.colors.primary,
+          color: context.colors.primary,
+          globalBackgroundColor: context.colors.secondary,
           doneColor: context.colors.surface,
           showSkipButton: true,
           skip: LocaleText(
@@ -70,7 +70,7 @@ class OnBoardingView extends StatelessWidget {
 
   DotsDecorator getDotDecoration(BuildContext context) => DotsDecorator(
       color: context.colors.surface,
-      activeColor: context.colors.secondary,
+      activeColor: context.colors.primary,
       size: const Size(10, 10),
       activeSize: const Size(22, 10),
       activeShape: RoundedRectangleBorder(
@@ -80,10 +80,10 @@ class OnBoardingView extends StatelessWidget {
   PageDecoration getPageDecoration(BuildContext context) => PageDecoration(
       titleTextStyle: TextStyle(
           fontSize: 28,
-          color: context.colors.secondary,
+          color: context.colors.primary,
           fontWeight: FontWeight.bold),
       bodyTextStyle: TextStyle(fontSize: 20, color: context.colors.surface),
       descriptionPadding: context.paddingAllDefaultScreen.copyWith(bottom: 0),
       imagePadding: context.paddingAllDefaultScreen,
-      pageColor: context.colors.primaryVariant);
+      pageColor: context.colors.secondaryVariant);
 }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:learn_language/core/base/view/base_view.dart';
-import 'package:learn_language/core/constants/image/image_constants.dart';
-import 'package:learn_language/view/authenticate/splash/viewmodel/splash_view_model.dart';
+import 'package:learn_language/core/extensions/context_extension.dart';
+
+import '../../../../core/base/view/base_view.dart';
+import '../../../../core/constants/image/image_constants.dart';
+import '../viewmodel/splash_view_model.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class SplashView extends StatelessWidget {
         },
         onPageBuilder: (BuildContext context, SplashViewModel value) =>
             Scaffold(
+              backgroundColor: context.colors.secondary,
               body: SafeArea(
                 child: Center(
                   child: Image.asset(

@@ -39,22 +39,16 @@ class AppThemeLight extends AppTheme with ILightTheme {
         appBarTheme: ThemeData.light().appBarTheme.copyWith(
             iconTheme: const IconThemeData(color: Colors.black87, size: 24)),
         inputDecorationTheme: InputDecorationTheme(
-          hintStyle:
-              TextStyle(fontSize: 12, color: _appColorSheme().secondaryVariant),
+          hintStyle: TextStyle(fontSize: 12, color: _appColorSheme().surface),
+          labelStyle: TextStyle(fontSize: 13, color: _appColorSheme().surface),
           errorStyle: TextStyle(color: _appColorSheme().error),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 15.5),
           hoverColor: _appColorSheme().secondaryVariant,
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            borderSide: BorderSide(color: Color(0xff130A1A)),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: _appColorSheme().secondary),
           ),
-          border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            borderSide: BorderSide(color: Color(0xff130A1A)),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: const BorderRadius.all(Radius.circular(8)),
+          focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: _appColorSheme().primary),
           ),
         ),
@@ -86,10 +80,10 @@ class AppThemeLight extends AppTheme with ILightTheme {
 
   ColorScheme _appColorSheme() {
     return const ColorScheme(
-        primary: Color(0xffedca82), // Primary
-        primaryVariant: Color(0xffe0cdbe), // Primary Hover
-        secondary: Color(0xff097770), // Allow
-        secondaryVariant: Color(0xffa9c0a6), // Black
+        primary: Color(0xff097770), // Primary
+        primaryVariant: Color(0xffa9c0a6), // Primary Hover
+        secondary: Color(0xffedca82), // Allow
+        secondaryVariant: Color(0xffe0cdbe), // Black
         surface: Color(0xff211211), // Dark Brown
         background: Color(0xffE5E5E5), // Gray
         error: Color(0xffFF1F1F), // Error

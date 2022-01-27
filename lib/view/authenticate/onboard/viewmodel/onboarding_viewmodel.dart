@@ -24,7 +24,7 @@ abstract class _OnBoardingViewModelBase with Store, BaseViewModel {
 
   void goToHome() async {
     await localeManager.setBoolValue(PreferencesKeys.FIRST_OPEN, true);
-    navigation.navigateToPageClear(NavigationConstants.TEST_VIEW, null);
+    navigation.navigateToPageClear(NavigationConstants.AUTH_VIEW, null);
   }
 
   void changeApplicationLanguage() async {
