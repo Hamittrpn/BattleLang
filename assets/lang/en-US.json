@@ -10,6 +10,33 @@
         "title3": "Wake Up",
         "body3": "Artık sabahları yeni şeyler öğrenerek uyan! Alarmını kur, kelime setlerini oluştur. Öğrenmeye başla.",
         "ready": "Let's Start"
+    },
+    "auth":{
+        "login":{
+            "login": "Log in"
+        },
+        "forgot":{
+            "forgot_password" : "Forgot your password?",
+            "enter_registered_mail": "Enter your registered email below to receive password reset instruction",
+            "reset_password":"Reset Passowrd",
+            "passowrd_reset_mail_sent": "Password Reset Email Sent"
+        }
+    },
+    "validations":{
+        "email":"Enter a valid email",
+        "name":"Please enter a name",
+        "surname":"Please enter a surname",
+        "password":"Please enter a passowrd",
+        "password_not_match":"Paswords not match"
 
+    },
+    "general":{
+        "name" : "Name",
+        "surname": "Surname",
+        "email" : "Email",
+        "birthdate": "Birthdate",
+        "password":"Passowrd",
+        "password_confirm": "Password Again",
+        "save" : "Save"
     }
 }

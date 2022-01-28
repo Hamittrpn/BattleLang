@@ -6,4 +6,5 @@ class NavigationConstants {
   static const LOGIN_VIEW = "/login";
   static const AUTH_VIEW = "/auth";
   static const EMAIL_VERIFIED = "/emailVerified";
+  static const FORGOT_PASSWORD = "/forgotPassword";
 }
