@@ -61,3 +61,10 @@ extension PaddingExtensionFormField on BuildContext {
       const EdgeInsets.symmetric(vertical: 12);
   EdgeInsets get paddingAllForm => const EdgeInsets.all(12);
 }
+
+extension DurationExtension on BuildContext {
+  Duration get lowDuration => const Duration(milliseconds: 300);
+  Duration get mediumDuration => const Duration(milliseconds: 500);
+  Duration get highDuration => const Duration(seconds: 1);
+  Duration get veryHighDuration => const Duration(milliseconds: 1500);
+}

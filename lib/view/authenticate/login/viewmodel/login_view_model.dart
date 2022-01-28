@@ -113,4 +113,8 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
         backgroundColor: Colors.red,
       ));
   }
+
+  void goToForgotPasswordScreen() {
+    navigation.navigateToPage(NavigationConstants.FORGOT_PASSWORD, null);
+  }
 }

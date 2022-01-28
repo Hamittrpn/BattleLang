@@ -24,7 +24,7 @@ class _AuthViewState extends State<AuthView>
 
   void setAnimation() {
     _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+        AnimationController(vsync: this, duration: context.lowDuration);
 
     _animationTextRotate =
         Tween<double>(begin: 0, end: 90).animate(_animationController);
@@ -68,7 +68,7 @@ class _AuthViewState extends State<AuthView>
                 children: [
                   //Login Form
                   AnimatedPositioned(
-                    duration: Duration(milliseconds: 300),
+                    duration: context.lowDuration,
                     width: context.screenWidth * 0.88,
                     height: context.screenHeight,
                     left: isShowRegister ? -context.screenWidth * 0.76 : 0,
@@ -81,7 +81,7 @@ class _AuthViewState extends State<AuthView>
                   ),
                   //Register Form
                   AnimatedPositioned(
-                    duration: Duration(milliseconds: 300),
+                    duration: context.lowDuration,
                     height: context.screenHeight,
                     width: context.screenWidth * 0.88,
                     left: isShowRegister
@@ -94,13 +94,13 @@ class _AuthViewState extends State<AuthView>
                   ),
                   // Login Text
                   AnimatedPositioned(
-                    duration: Duration(milliseconds: 300),
+                    duration: context.lowDuration,
                     bottom: isShowRegister
                         ? context.screenHeight / 2 - 80
                         : context.screenHeight * 0.2,
                     left: isShowRegister ? 0 : context.screenWidth * 0.44 - 80,
                     child: AnimatedDefaultTextStyle(
-                      duration: Duration(milliseconds: 300),
+                      duration: context.lowDuration,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: !isShowRegister ? 30 : 22,
@@ -132,13 +132,13 @@ class _AuthViewState extends State<AuthView>
                   ),
                   //Register Text
                   AnimatedPositioned(
-                    duration: Duration(milliseconds: 300),
+                    duration: context.lowDuration,
                     bottom: !isShowRegister
                         ? context.screenHeight / 2 - 80
                         : context.screenHeight * 0.2,
                     right: isShowRegister ? context.screenWidth * 0.44 - 80 : 0,
                     child: AnimatedDefaultTextStyle(
-                      duration: Duration(milliseconds: 300),
+                      duration: context.lowDuration,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: !isShowRegister ? 20 : 32,

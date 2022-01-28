@@ -1,17 +1,14 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_language/core/constants/navigation/navigation_constants.dart';
-import 'package:learn_language/core/utils/utils.dart';
 import 'package:mobx/mobx.dart';
 
 import '../../../../core/base/model/base_view_model.dart';
 import '../../../../core/constants/enum/button_state_enum.dart';
+import '../../../../core/constants/navigation/navigation_constants.dart';
 import '../model/user.dart';
 
 part 'register_view_model.g.dart';

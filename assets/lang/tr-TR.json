@@ -10,5 +10,32 @@
         "title3": "Uykunu Kaçırabiliriz",
         "body3": "Artık sabahları yeni şeyler öğrenerek uyan! Alarmını kur, kelime setlerini oluştur. Öğrenmeye başla.",
         "ready": "Hadi Başlayalım"
+    },
+    "auth":{
+        "login":{
+            "login": "Log in"
+        },
+        "forgot":{
+            "forgot_password" : "Parolanızı mı unuttunuz?",
+            "enter_registered_mail": "Parola sıfırlama mailini almak için kayıtlı e-postanızı aşağıya giriniz",
+            "reset_password":"Parola Sıfırla",
+            "passowrd_reset_mail_sent": "Parola Sıfırlama Maili Gönderildi"
+        }
+    },
+    "validations":{
+        "email":"Geçerli email adresi giriniz",
+        "name":"Lütfen isim giriniz",
+        "surname":"Lütfen soyisim giriniz",
+        "password":"Lütfen parola giriniz",
+        "password_not_match":"Parolalar eşleşmiyor"
+    },
+    "general":{
+        "name" : "İsim",
+        "surname": "Soyisim",
+        "email" : "E-posta",
+        "birthdate": "Doğum Tarihi",
+        "password":"Parola",
+        "password_confirm": "Parola Tekrar",
+        "save" : "Kaydet"
     }
 }
