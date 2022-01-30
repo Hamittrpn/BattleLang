@@ -89,7 +89,7 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
       isStretched = false;
       await Future.delayed(const Duration(milliseconds: 300));
 
-      navigation.navigateToPageClear(NavigationConstants.TEST_VIEW, null);
+      navigation.navigateToPageClear(NavigationConstants.FEED_VIEW, null);
     } on FirebaseAuthException catch (e) {
       state = ButtonStates.INIT;
       isDone = false;
@@ -115,6 +115,6 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
   }
 
   void goToForgotPasswordScreen() {
-    navigation.navigateToPage(NavigationConstants.FORGOT_PASSWORD, null);
+    navigation.navigateToPage(NavigationConstants.FORGOT_PASSWORD_VIEW, null);
   }
 }

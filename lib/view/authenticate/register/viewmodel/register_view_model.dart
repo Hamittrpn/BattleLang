@@ -105,7 +105,7 @@ abstract class _RegisterViewModelBase with Store, BaseViewModel {
         await Future.delayed(const Duration(seconds: 1));
 
         navigation.navigateToPageClear(
-            NavigationConstants.EMAIL_VERIFIED, null);
+            NavigationConstants.EMAIL_VERIFIED_VIEW, null);
       } catch (e) {
         if (kDebugMode) {
           print(e);
