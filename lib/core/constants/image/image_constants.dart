@@ -6,6 +6,9 @@ class ImageConstants {
 
   //png
   String get splashImage => toPng("ic_splash_400");
+  String get friends => toPng("ic_friends");
+  String get challengeInfo => toPng("ic_challenge_info");
+  String get points => toPng("ic_points");
 
   //jpeg
   String get challengeBanner1 => toJpeg("ic_challange1");

@@ -38,11 +38,13 @@ class HeaderWithSearchBox extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                Image.asset(
-                  ImageConstants.instance.splashImage,
-                  width: 80,
-                  height: 80,
-                ),
+                CircleAvatar(
+                  radius: 32,
+                  backgroundColor: context.colors.secondary,
+                  backgroundImage: AssetImage(
+                    ImageConstants.instance.user3,
+                  ),
+                )
               ],
             ),
           ),

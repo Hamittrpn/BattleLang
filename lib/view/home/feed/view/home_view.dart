@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_language/core/constants/image/image_constants.dart';
+import 'package:learn_language/core/extensions/context_extension.dart';
 
 import '../../../../core/base/view/base_view.dart';
 import '../../../../core/components/custom_bottom_navbar.dart';
@@ -19,7 +22,7 @@ class HomeView extends StatelessWidget {
         body: NestedScrollView(
           floatHeaderSlivers: true,
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
-            buildSliverAppBar(innerBoxIsScrolled),
+            buildSliverAppBar(context, innerBoxIsScrolled),
           ],
           body: Body(viewModel: viewModel),
         ),
@@ -28,11 +31,18 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  SliverAppBar buildSliverAppBar(bool innerBoxIsScrolled) {
+  SliverAppBar buildSliverAppBar(
+      BuildContext context, bool innerBoxIsScrolled) {
     return SliverAppBar(
       leading: const Icon(Icons.menu),
+      title: Image.asset(
+        ImageConstants.instance.splashImage,
+        height: 50,
+        fit: BoxFit.contain,
+      ),
+      centerTitle: true,
       floating: true,
-      snap: false,
+      snap: true,
       pinned: true,
       forceElevated: innerBoxIsScrolled,
     );

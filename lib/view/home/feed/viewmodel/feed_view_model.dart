@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:learn_language/core/base/model/base_view_model.dart';
-import 'package:learn_language/core/constants/navigation/navigation_constants.dart';
-
 import 'package:mobx/mobx.dart';
+
+import '../../../../core/base/model/base_view_model.dart';
+import '../../../../core/constants/navigation/navigation_constants.dart';
+
 part 'feed_view_model.g.dart';
 
 class FeedViewModel = _FeedViewModelBase with _$FeedViewModel;
