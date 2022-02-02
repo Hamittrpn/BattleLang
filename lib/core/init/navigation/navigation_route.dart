@@ -20,7 +20,7 @@ class NavigationRoute {
   Route<dynamic> generateRoute(RouteSettings args) {
     switch (args.name) {
       case NavigationConstants.DEFAULT_VIEW:
-        return normalNavigate(const SplashView());
+        return normalNavigate(const HomeView());
       case NavigationConstants.ON_BOARDING_VIEW:
         return normalNavigate(const OnBoardingView());
       case NavigationConstants.FEED_VIEW:
