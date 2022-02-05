@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/base/view/base_view.dart';
 import '../components/body.dart';
 import '../viewmodel/feed_detail_viewmodel.dart';
@@ -15,7 +16,7 @@ class ChallengeDetailView extends StatelessWidget {
         model.init();
       },
       onPageBuilder: (BuildContext context, FeedDetailViewModel value) =>
-          Scaffold(
+          const Scaffold(
         body: Body(),
       ),
     );

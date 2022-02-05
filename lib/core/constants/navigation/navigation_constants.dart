@@ -9,4 +9,5 @@ class NavigationConstants {
   static const FORGOT_PASSWORD_VIEW = "/forgotPassword";
   static const FEED_VIEW = "/feed";
   static const CHALLENGE_DETAIL_VIEW = "/feedDetail";
+  static const CHALLENGE_LIST_VIEW = "/challengesList";
 }

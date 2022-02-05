@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learn_language/view/home/feed/viewmodel/feed_view_model.dart';
 
 import '../../../../core/constants/image/image_constants.dart';
 import '../../../../core/extensions/context_extension.dart';
+import '../viewmodel/feed_view_model.dart';
 
 class LastChallenges extends StatelessWidget {
   const LastChallenges({

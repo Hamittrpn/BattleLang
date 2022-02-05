@@ -1,11 +1,9 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_language/core/constants/image/image_constants.dart';
-import 'package:learn_language/core/extensions/context_extension.dart';
 
 import '../../../../core/base/view/base_view.dart';
 import '../../../../core/components/custom_bottom_navbar.dart';
-import '../component/body.dart';
+import '../../../../core/constants/image/image_constants.dart';
+import '../components/body.dart';
 import '../viewmodel/feed_view_model.dart';
 
 class HomeView extends StatelessWidget {
