@@ -19,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -10),
+            offset: const Offset(0, -10),
             blurRadius: 35,
             color: context.colors.primary.withOpacity(0.38),
           ),
