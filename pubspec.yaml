@@ -32,6 +32,7 @@ dependencies:
   cloud_firestore: ^3.1.6
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.0
+  curved_navigation_bar: ^1.0.2
   email_validator: ^2.0.1
   firebase_auth: ^3.3.5
   flutter:

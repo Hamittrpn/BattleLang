@@ -50,16 +50,6 @@ class _ChallengesViewState extends State<ChallengesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.secondaryVariant,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
       body: buildBody(context),
     );
   }
@@ -100,46 +90,50 @@ class _ChallengesViewState extends State<ChallengesView> {
     return Transform.scale(
       scale: 1.7,
       alignment: Alignment.bottomCenter,
-      child: PageView.builder(
-        controller: _challengePageController,
-        itemCount: challenges.length + 1,
-        scrollDirection: Axis.vertical,
-        onPageChanged: (value) {
-          if (value < challenges.length) {
-            _pageTextController.animateToPage(
-              value,
-              duration: context.lowDuration,
-              curve: Curves.easeOut,
-            );
-          }
-        },
-        itemBuilder: (context, index) {
-          if (index == 0) {
-            return const SizedBox.shrink();
-          }
-          final challenge = challenges[index - 1];
-          final result = _currentPage - index + 1;
-          final value = -0.4 * result + 1;
-          final opacity = value.clamp(0.0, 1.0);
+      child: Padding(
+        padding: EdgeInsets.only(bottom: context.normalValue + 20),
+        child: PageView.builder(
+          controller: _challengePageController,
+          itemCount: challenges.length + 1,
+          scrollDirection: Axis.vertical,
+          onPageChanged: (value) {
+            if (value < challenges.length) {
+              _pageTextController.animateToPage(
+                value,
+                duration: context.lowDuration,
+                curve: Curves.easeOut,
+              );
+            }
+          },
+          itemBuilder: (context, index) {
+            if (index == 0) {
+              return const SizedBox.shrink();
+            }
+            final challenge = challenges[index - 1];
+            final result = _currentPage - index + 1;
+            final value = -0.4 * result + 1;
+            final opacity = value.clamp(0.0, 1.0);
 
-          return Padding(
-            padding: EdgeInsets.only(bottom: context.mediumValue),
-            child: Transform(
-              alignment: Alignment.bottomCenter,
-              transform: Matrix4.identity()
-                ..setEntry(3, 2, 0.001)
-                ..translate(0.0, context.screenHeight / 2.6 * (1 - value).abs())
-                ..scale(value),
-              child: Opacity(
-                opacity: opacity,
-                child: Image.asset(
-                  challenge.image,
-                  fit: BoxFit.fitHeight,
+            return Padding(
+              padding: EdgeInsets.only(bottom: context.mediumValue),
+              child: Transform(
+                alignment: Alignment.bottomCenter,
+                transform: Matrix4.identity()
+                  ..setEntry(3, 2, 0.001)
+                  ..translate(
+                      0.0, context.screenHeight / 2.6 * (1 - value).abs())
+                  ..scale(value),
+                child: Opacity(
+                  opacity: opacity,
+                  child: Image.asset(
+                    challenge.image,
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
