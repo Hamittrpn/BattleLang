@@ -57,11 +57,11 @@ class HeaderWithSearchBox extends StatelessWidget {
               padding: context.paddingHorizontalDefaultScreen,
               height: 54,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: context.colors.onBackground,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    offset: Offset(0, 10),
+                    offset: const Offset(0, 10),
                     blurRadius: 50,
                     color: context.colors.primary.withOpacity(0.23),
                   ),
@@ -75,7 +75,10 @@ class HeaderWithSearchBox extends StatelessWidget {
                   ),
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none,
-                  suffixIcon: const Icon(Icons.search),
+                  suffixIcon: Icon(
+                    Icons.search,
+                    color: context.colors.primary,
+                  ),
                 ),
               ),
             ),

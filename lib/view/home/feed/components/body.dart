@@ -15,23 +15,26 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       physics: const ClampingScrollPhysics(),
-      child: Column(
-        children: [
-          const HeaderWithSearchBox(),
-          TitleWithMoreButton(
-            title: "Last Challenges",
-            press: () {},
-          ),
-          LastChallenges(
-            viewModel: viewModel,
-          ),
-          TitleWithMoreButton(
-            title: "Your Friends",
-            press: () {},
-          ),
-          const YourFriends(),
-          SizedBox(height: context.normalValue),
-        ],
+      child: Padding(
+        padding: EdgeInsets.only(bottom: context.mediumValue),
+        child: Column(
+          children: [
+            const HeaderWithSearchBox(),
+            TitleWithMoreButton(
+              title: "Last Challenges",
+              press: () {},
+            ),
+            LastChallenges(
+              viewModel: viewModel,
+            ),
+            TitleWithMoreButton(
+              title: "Your Friends",
+              press: () {},
+            ),
+            const YourFriends(),
+            SizedBox(height: context.normalValue),
+          ],
+        ),
       ),
     );
   }

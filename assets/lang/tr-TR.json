@@ -13,7 +13,8 @@
     },
     "auth":{
         "login":{
-            "login": "Log in"
+            "login": "Giriş Yap",
+            "log_out": "Çıkış Yap"
         },
         "forgot":{
             "forgot_password" : "Parolanızı mı unuttunuz?",
@@ -37,5 +38,23 @@
         "password":"Parola",
         "password_confirm": "Parola Tekrar",
         "save" : "Kaydet"
+    },
+    "settings":{
+        "settings": "Ayarlar",
+        "general":"Genel",
+        "dark_mode": "Gece Modu",
+        "light_mode": "Gündüz Modu",
+        "account_settings" : "Hesap Ayarları",
+        "notifications": "Bildirimler",
+        "feedback":"Geri Bildirim",
+        "bug": "Hata Raporla",
+        "privacy" : "Gizlilik",
+        "security": "Güvenlik",
+        "language": "Dil",
+        "newsletter": "Haberler",
+        "app_updates": "Güncellemeler",
+        "news_for_you": "Senin için",
+        "account_activity": "Hesap Aktiviteleri",
+        "account_info": "Hesap Bilgileri"
     }
 }

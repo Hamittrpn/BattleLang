@@ -12,6 +12,7 @@ abstract class  LocaleKeys {
   static const onboard_ready = 'onboard.ready';
   static const onboard = 'onboard';
   static const auth_login_login = 'auth.login.login';
+  static const auth_login_log_out = 'auth.login.log_out';
   static const auth_login = 'auth.login';
   static const auth_forgot_forgot_password = 'auth.forgot.forgot_password';
   static const auth_forgot_enter_registered_mail = 'auth.forgot.enter_registered_mail';
@@ -33,5 +34,22 @@ abstract class  LocaleKeys {
   static const general_password_confirm = 'general.password_confirm';
   static const general_save = 'general.save';
   static const general = 'general';
+  static const settings_settings = 'settings.settings';
+  static const settings_general = 'settings.general';
+  static const settings_dark_mode = 'settings.dark_mode';
+  static const settings_light_mode = 'settings.light_mode';
+  static const settings_account_settings = 'settings.account_settings';
+  static const settings_notifications = 'settings.notifications';
+  static const settings_feedback = 'settings.feedback';
+  static const settings_bug = 'settings.bug';
+  static const settings_privacy = 'settings.privacy';
+  static const settings_security = 'settings.security';
+  static const settings_language = 'settings.language';
+  static const settings_newsletter = 'settings.newsletter';
+  static const settings_app_updates = 'settings.app_updates';
+  static const settings_news_for_you = 'settings.news_for_you';
+  static const settings_account_activity = 'settings.account_activity';
+  static const settings_account_info = 'settings.account_info';
+  static const settings = 'settings';
 
 }
