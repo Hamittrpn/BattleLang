@@ -49,7 +49,7 @@ class _ChallengesViewState extends State<ChallengesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.colors.secondaryVariant,
+      backgroundColor: context.colors.onBackground,
       body: buildBody(context),
     );
   }
@@ -160,7 +160,8 @@ class _ChallengesViewState extends State<ChallengesView> {
                           horizontal: context.screenWidth * 0.2),
                       child: Text(
                         challenges[index].name,
-                        style: context.textTheme.headline4,
+                        style: context.textTheme.headline4!
+                            .copyWith(color: context.colors.primary),
                         textAlign: TextAlign.center,
                         maxLines: 2,
                       ),
@@ -179,7 +180,8 @@ class _ChallengesViewState extends State<ChallengesView> {
       duration: context.lowDuration,
       child: Text(
         challenges[_currentPage.toInt()].description,
-        style: context.textTheme.bodyText1,
+        style: context.textTheme.bodyText1!
+            .copyWith(color: context.colors.primaryVariant),
       ),
       key: Key(challenges[_currentPage.toInt()].name),
     );

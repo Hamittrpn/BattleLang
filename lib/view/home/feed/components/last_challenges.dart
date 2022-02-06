@@ -96,7 +96,7 @@ class LastChallengesCard extends StatelessWidget {
             child: Container(
               padding: context.paddingAllDefaultScreen / 2,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: context.colors.onBackground,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10),

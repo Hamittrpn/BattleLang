@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_language/view/authenticate/splash/view/splash_view.dart';
 import 'package:learn_language/view/home/challenge/view/challenges_view.dart';
 import 'package:learn_language/view/home/home_view.dart';
+import 'package:learn_language/view/settings/view/settings_view.dart';
 
 import '../../../view/authenticate/auth/view/auth_view.dart';
 import '../../../view/authenticate/onboard/view/onboarding_view.dart';

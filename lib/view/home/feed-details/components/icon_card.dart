@@ -18,13 +18,13 @@ class IconCard extends StatelessWidget {
       height: 62,
       width: 62,
       decoration: BoxDecoration(
-        color: context.colors.onBackground,
+        color: context.colors.secondary,
         borderRadius: BorderRadius.circular(6),
         boxShadow: [
           BoxShadow(
             offset: const Offset(0, 20),
             blurRadius: 22,
-            color: context.colors.primaryVariant.withOpacity(0.44),
+            color: context.colors.onSurface.withOpacity(0.44),
           ),
           BoxShadow(
               offset: const Offset(-15, -15),

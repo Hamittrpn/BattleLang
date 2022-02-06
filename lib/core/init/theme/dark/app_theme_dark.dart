@@ -2,47 +2,49 @@ import 'package:flutter/material.dart';
 
 import '../../../constants/app/app_constants.dart';
 import '../app_theme.dart';
-import 'light_theme_interface.dart';
+import 'dark_theme_interface.dart';
 
-class AppThemeLight extends AppTheme with ILightTheme {
-  static AppThemeLight? _instance;
+class AppThemeDark extends AppTheme with IDarkTheme {
+  static AppThemeDark? _instance;
 
-  static AppThemeLight get instance {
-    return _instance ??= AppThemeLight._init();
+  static AppThemeDark get instance {
+    return _instance ??= AppThemeDark._init();
   }
 
-  AppThemeLight._init();
+  AppThemeDark._init();
 
   @override
   ThemeData get theme => ThemeData(
         fontFamily: ApplicationConstants.FONT_FAMILY,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: const Color(0xff211211),
         colorScheme: _appColorSheme(),
         textTheme: textTheme(),
         buttonTheme: ButtonThemeData(
-          buttonColor: _appColorSheme().primary,
+          buttonColor: _appColorSheme().secondary,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
             elevation: 0,
             selectedItemColor: _appColorSheme().primary,
             selectedIconTheme: IconThemeData(color: _appColorSheme().primary),
-            unselectedLabelStyle: const TextStyle(
+            unselectedLabelStyle: TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w500,
-                color: Color(0xff130A1A)),
-            selectedLabelStyle: const TextStyle(
+                color: _appColorSheme().onSurface),
+            selectedLabelStyle: TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w500,
-                color: Color(0xff130A1A)),
-            unselectedItemColor: const Color(0xff2D3033)),
-        appBarTheme: ThemeData.light().appBarTheme.copyWith(
-            iconTheme: const IconThemeData(color: Colors.black87, size: 24)),
+                color: _appColorSheme().onSurface),
+            unselectedItemColor: _appColorSheme().onSurface),
+        appBarTheme: ThemeData.dark().appBarTheme.copyWith(
+            iconTheme:
+                IconThemeData(color: _appColorSheme().onBackground, size: 24)),
         inputDecorationTheme: InputDecorationTheme(
           fillColor: _appColorSheme().onBackground,
           filled: true,
-          hintStyle: TextStyle(fontSize: 12, color: _appColorSheme().surface),
-          labelStyle: TextStyle(fontSize: 13, color: _appColorSheme().surface),
+          hintStyle: TextStyle(fontSize: 12, color: _appColorSheme().onSurface),
+          labelStyle:
+              TextStyle(fontSize: 13, color: _appColorSheme().onSurface),
           errorStyle: TextStyle(color: _appColorSheme().error),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 15.5),
@@ -59,25 +61,27 @@ class AppThemeLight extends AppTheme with ILightTheme {
 
   TabBarTheme get tabBarTheme {
     return TabBarTheme(
-        labelColor: Colors.black,
+        labelColor: _appColorSheme().onSurface,
         labelPadding: EdgeInsets.zero,
         labelStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
             fontFamily: ApplicationConstants.FONT_FAMILY),
-        unselectedLabelColor: Colors.black.withOpacity(0.6));
+        unselectedLabelColor: _appColorSheme().onSurface);
   }
 
   TextTheme textTheme() {
     return TextTheme(
-        button: const TextStyle(
-            fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-        bodyText1: textThemeLight.body,
-        bodyText2: textThemeLight.bodySmall,
-        caption: textThemeLight.caption1,
-        overline: textThemeLight.title,
-        headline6: textThemeLight.h7,
-        headline3: textThemeLight.h3);
+        button: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: _appColorSheme().onSurface),
+        bodyText1: textThemeDark.body,
+        bodyText2: textThemeDark.bodySmall,
+        caption: textThemeDark.caption1,
+        overline: textThemeDark.title,
+        headline6: textThemeDark.h7,
+        headline3: textThemeDark.h3);
   }
 
   ColorScheme _appColorSheme() {
@@ -86,14 +90,14 @@ class AppThemeLight extends AppTheme with ILightTheme {
         primaryVariant: Color(0xffa9c0a6), // Primary Hover
         secondary: Color(0xffedca82), // Allow
         secondaryVariant: Color(0xffe0cdbe), // Black
-        surface: Color(0xff211211), // Dark Brown
-        background: Color(0xffE5E5E5), // Gray
+        surface: Color(0xffE5E5E5), // Dark Brown
+        background: Color(0xff211211), // Gray
         error: Color(0xffFF1F1F), // Error
         onPrimary: Color(0xff8ED2FF), // Blue Graphic
         onSecondary: Color(0xffFF88BF), // Pink Graphic
-        onSurface: Color(0xff211211), // Orange Graphic
-        onBackground: Colors.white, // White
+        onSurface: Color(0xffedca82), // Orange Graphic
+        onBackground: Color(0xff211211), // W
         onError: Colors.white,
-        brightness: Brightness.light);
+        brightness: Brightness.dark);
   }
 }

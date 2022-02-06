@@ -13,7 +13,8 @@
     },
     "auth":{
         "login":{
-            "login": "Log in"
+            "login": "Log in",
+            "log_out": "Log out"
         },
         "forgot":{
             "forgot_password" : "Forgot your password?",
@@ -38,5 +39,23 @@
         "password":"Passowrd",
         "password_confirm": "Password Again",
         "save" : "Save"
+    },
+    "settings":{
+        "settings": "Settings",
+        "general":"General",
+        "dark_mode": "Dark Mode",
+        "light_mode": "Light Mode",
+        "account_settings" : "Account Settings",
+        "notifications": "Notifications",
+        "feedback":"Send Feedback",
+        "bug": "Report A Bug",
+        "privacy" : "Privacy",
+        "security": "Security",
+        "language": "Language",
+        "newsletter": "Newsletter",
+        "app_updates": "App Updates",
+        "news_for_you": "News For You",
+        "account_activity": "Account Activity",
+        "account_info": "Account Info"
     }
 }

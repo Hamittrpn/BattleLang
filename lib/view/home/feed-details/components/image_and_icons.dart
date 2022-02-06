@@ -30,7 +30,10 @@ class ImageAndIcons extends StatelessWidget {
                           Navigator.pop(context);
                         },
                         padding: context.paddingAllDefaultScreen,
-                        icon: const Icon(Icons.arrow_back),
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: context.colors.onSurface,
+                        ),
                       ),
                     ),
                     const Spacer(),
