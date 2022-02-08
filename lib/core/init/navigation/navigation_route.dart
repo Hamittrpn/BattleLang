@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learn_language/view/authenticate/splash/view/splash_view.dart';
-import 'package:learn_language/view/home/challenge/view/challenges_view.dart';
-import 'package:learn_language/view/home/home_view.dart';
-import 'package:learn_language/view/settings/view/settings_view.dart';
 
 import '../../../view/authenticate/auth/view/auth_view.dart';
 import '../../../view/authenticate/onboard/view/onboarding_view.dart';
@@ -10,6 +6,7 @@ import '../../../view/authenticate/register/view/forgor_password_view.dart';
 import '../../../view/authenticate/register/view/verify_email_view.dart';
 import '../../../view/home/feed-details/view/feed_detail_view.dart';
 import '../../../view/home/feed/view/feed_view.dart';
+import '../../../view/home/home_view.dart';
 import '../../../view/home/test/view/test_view.dart';
 import '../../components/card/not_found_navigation_card.dart';
 import '../../constants/navigation/navigation_constants.dart';
