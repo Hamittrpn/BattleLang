@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/image/image_constants.dart';
@@ -27,7 +28,7 @@ class ImageAndIcons extends StatelessWidget {
                       alignment: Alignment.topLeft,
                       child: IconButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          context.router.pop();
                         },
                         padding: context.paddingAllDefaultScreen,
                         icon: Icon(

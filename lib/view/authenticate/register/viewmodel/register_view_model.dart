@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
@@ -104,8 +105,7 @@ abstract class _RegisterViewModelBase with Store, BaseViewModel {
         isStretched = false;
         await Future.delayed(const Duration(seconds: 1));
 
-        navigation.navigateToPageClear(
-            NavigationConstants.EMAIL_VERIFIED_VIEW, null);
+        context!.router.pushNamed(NavigationConstants.EMAIL_VERIFIED_VIEW);
       } catch (e) {
         if (kDebugMode) {
           print(e);

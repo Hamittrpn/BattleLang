@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -23,7 +24,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
   }
 
   Future<void> controlAppState() async {
-    navigation.navigateToPageClear(NavigationConstants.ON_BOARDING_VIEW, null);
+    context!.router.pushNamed(NavigationConstants.ON_BOARDING_VIEW);
   }
 
   Future<void> _firebaseInit() async {
@@ -47,7 +48,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
         if (kDebugMode) {
           print(routeFromMessage);
         }
-        navigation.navigateToPage(routeFromMessage, null);
+        context!.router.pushNamed(routeFromMessage);
       }
     });
 
@@ -67,7 +68,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
     // When the app is in background but opened and user taps
     FirebaseMessaging.onMessageOpenedApp.listen((message) {
       final routeFromMessage = message.data["routePage"];
-      navigation.navigateToPage(routeFromMessage, null);
+      context!.router.pushNamed(routeFromMessage);
     });
   }
 

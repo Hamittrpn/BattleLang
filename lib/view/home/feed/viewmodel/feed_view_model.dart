@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 
@@ -37,6 +38,6 @@ abstract class _FeedViewModelBase with Store, BaseViewModel {
   void init() {}
 
   void goToDetailView() {
-    navigation.navigateToPage(NavigationConstants.CHALLENGE_DETAIL_VIEW, null);
+    context!.router.pushNamed(NavigationConstants.CHALLENGE_DETAIL_VIEW);
   }
 }

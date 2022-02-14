@@ -1,23 +1,22 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
-import '../../../../core/init/navigation/navigation_service.dart';
+import 'package:learn_language/core/init/navigation/router.gr.dart';
 
 class LocalNotificationService {
+  static final _router = AppRouter();
   static final FlutterLocalNotificationsPlugin _notificationPlugin =
       FlutterLocalNotificationsPlugin();
 
   static void initialize() {
-    NavigationService navigation = NavigationService.instance;
-
     const InitializationSettings initializationSettings =
         InitializationSettings(
             android: AndroidInitializationSettings("@mipmap/ic_launcher"));
     _notificationPlugin.initialize(initializationSettings,
         onSelectNotification: (String? route) async {
       if (route != null) {
-        navigation.navigateToPage(route, null);
+        _router.pushNamed(route);
       }
     });
   }
