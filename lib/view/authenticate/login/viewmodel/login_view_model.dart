@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:auto_route/auto_route.dart';
 
 import '../../../../../core/base/model/base_view_model.dart';
 import '../../../../core/constants/enum/button_state_enum.dart';
@@ -89,7 +90,9 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
       isStretched = false;
       await Future.delayed(const Duration(milliseconds: 300));
 
-      navigation.navigateToPageClear(NavigationConstants.FEED_VIEW, null);
+      context!.router.pushNamed(
+        NavigationConstants.HOME_VIEW,
+      );
     } on FirebaseAuthException catch (e) {
       state = ButtonStates.INIT;
       isDone = false;
@@ -115,6 +118,6 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
   }
 
   void goToForgotPasswordScreen() {
-    navigation.navigateToPage(NavigationConstants.FORGOT_PASSWORD_VIEW, null);
+    context!.router.pushNamed(NavigationConstants.FORGOT_PASSWORD_VIEW);
   }
 }
