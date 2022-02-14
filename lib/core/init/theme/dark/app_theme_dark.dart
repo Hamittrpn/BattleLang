@@ -48,7 +48,7 @@ class AppThemeDark extends AppTheme with IDarkTheme {
           errorStyle: TextStyle(color: _appColorSheme().error),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 15.5),
-          hoverColor: _appColorSheme().secondaryVariant,
+          hoverColor: _appColorSheme().onSecondary,
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: _appColorSheme().secondary),
           ),
@@ -86,17 +86,15 @@ class AppThemeDark extends AppTheme with IDarkTheme {
 
   ColorScheme _appColorSheme() {
     return const ColorScheme(
-        primary: Color(0xff097770), // Primary
-        primaryVariant: Color(0xffa9c0a6), // Primary Hover
-        secondary: Color(0xffedca82), // Allow
-        secondaryVariant: Color(0xffe0cdbe), // Black
-        surface: Color(0xffE5E5E5), // Dark Brown
-        background: Color(0xff211211), // Gray
-        error: Color(0xffFF1F1F), // Error
-        onPrimary: Color(0xff8ED2FF), // Blue Graphic
-        onSecondary: Color(0xffFF88BF), // Pink Graphic
-        onSurface: Color(0xffedca82), // Orange Graphic
-        onBackground: Color(0xff211211), // W
+        primary: Color(0xff097770),
+        onPrimary: Color(0xffa9c0a6),
+        secondary: Color(0xffedca82),
+        onSecondary: Color(0xffe0cdbe),
+        background: Color(0xff211211),
+        onBackground: Color(0xff211211),
+        surface: Color(0xffE5E5E5),
+        onSurface: Color(0xffedca82),
+        error: Color(0xffFF1F1F),
         onError: Colors.white,
         brightness: Brightness.dark);
   }

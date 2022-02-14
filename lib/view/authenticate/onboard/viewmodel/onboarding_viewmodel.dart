@@ -22,7 +22,7 @@ abstract class _OnBoardingViewModelBase with Store, BaseViewModel {
   @override
   void init() {}
 
-  void goToHome() async {
+  Future<void> goToHome() async {
     await localeManager.setBoolValue(PreferencesKeys.FIRST_OPEN, true);
     navigation.navigateToPageClear(NavigationConstants.AUTH_VIEW, null);
   }

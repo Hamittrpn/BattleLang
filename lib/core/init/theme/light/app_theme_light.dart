@@ -46,7 +46,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
           errorStyle: TextStyle(color: _appColorSheme().error),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16, vertical: 15.5),
-          hoverColor: _appColorSheme().secondaryVariant,
+          hoverColor: _appColorSheme().onSecondary,
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: _appColorSheme().secondary),
           ),
@@ -82,17 +82,15 @@ class AppThemeLight extends AppTheme with ILightTheme {
 
   ColorScheme _appColorSheme() {
     return const ColorScheme(
-        primary: Color(0xff097770), // Primary
-        primaryVariant: Color(0xffa9c0a6), // Primary Hover
-        secondary: Color(0xffedca82), // Allow
-        secondaryVariant: Color(0xffe0cdbe), // Black
-        surface: Color(0xff211211), // Dark Brown
-        background: Color(0xffE5E5E5), // Gray
-        error: Color(0xffFF1F1F), // Error
-        onPrimary: Color(0xff8ED2FF), // Blue Graphic
-        onSecondary: Color(0xffFF88BF), // Pink Graphic
-        onSurface: Color(0xff211211), // Orange Graphic
-        onBackground: Colors.white, // White
+        primary: Color(0xff097770),
+        onPrimary: Color(0xffa9c0a6),
+        secondary: Color(0xffedca82),
+        onSecondary: Color(0xffe0cdbe),
+        background: Color(0xffE5E5E5),
+        onBackground: Colors.white,
+        surface: Color(0xff211211),
+        onSurface: Color(0xff211211),
+        error: Color(0xffFF1F1F),
         onError: Colors.white,
         brightness: Brightness.light);
   }

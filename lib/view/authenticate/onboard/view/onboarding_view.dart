@@ -1,3 +1,4 @@
+// ignore: implementation_imports
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -58,6 +59,7 @@ class OnBoardingView extends StatelessWidget {
           ),
           onSkip: () => viewModel.changeApplicationLanguage(),
           done: const LocaleText(
+            textAlign: TextAlign.center,
             text: LocaleKeys.onboard_ready,
           ),
           onDone: viewModel.goToHome,
@@ -85,5 +87,5 @@ class OnBoardingView extends StatelessWidget {
       bodyTextStyle: TextStyle(fontSize: 20, color: context.colors.surface),
       descriptionPadding: context.paddingAllDefaultScreen.copyWith(bottom: 0),
       imagePadding: context.paddingAllDefaultScreen,
-      pageColor: context.colors.secondaryVariant);
+      pageColor: context.colors.secondary);
 }

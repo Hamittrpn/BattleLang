@@ -22,7 +22,7 @@ class TitleAndDescription extends StatelessWidget {
                 TextSpan(
                   text: "$title\n",
                   style: context.textTheme.headline4!.copyWith(
-                      color: context.colors.primaryVariant,
+                      color: context.colors.primary,
                       fontWeight: FontWeight.bold),
                 ),
                 TextSpan(

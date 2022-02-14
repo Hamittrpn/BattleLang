@@ -28,7 +28,8 @@ class ImageConstants {
   String get onboardImage3 => toSVG("ic_onboarding3");
 
   //animation
-  String get animForgotPassword => toLottie("anim_forgot_password");
+  String get forgotPassword => toLottie("anim_forgot_password");
+  String get connectivity => toLottie("anim_connectivity");
 
   String toPng(String name) => "assets/image/$name.png";
   String toJpeg(String name) => "assets/image/$name.jpeg";
