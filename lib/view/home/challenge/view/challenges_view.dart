@@ -181,7 +181,7 @@ class _ChallengesViewState extends State<ChallengesView> {
       child: Text(
         challenges[_currentPage.toInt()].description,
         style: context.textTheme.bodyText1!
-            .copyWith(color: context.colors.primaryVariant),
+            .copyWith(color: context.colors.primary),
       ),
       key: Key(challenges[_currentPage.toInt()].name),
     );

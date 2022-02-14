@@ -1,3 +1,4 @@
+// ignore: implementation_imports
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -34,7 +35,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
 
   Scaffold body(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.colors.secondaryVariant,
+      backgroundColor: context.colors.secondary,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -67,8 +68,8 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
   LocaleText buildForgotTitleText(BuildContext context) {
     return LocaleText(
       text: LocaleKeys.auth_forgot_forgot_password,
-      style: context.textTheme.headline6!.copyWith(
-          fontWeight: FontWeight.bold, color: context.colors.primaryVariant),
+      style: context.textTheme.headline6!
+          .copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
     );
   }
 
@@ -89,7 +90,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
     return Padding(
       padding: context.paddingVerticalDefaultScreen,
       child: Lottie.asset(
-        ImageConstants.instance.animForgotPassword,
+        ImageConstants.instance.forgotPassword,
         width: context.screenWidth * 0.6,
       ),
     );
@@ -102,7 +103,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
       decoration: InputDecoration(
         prefixIcon: const Icon(Icons.email),
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: context.colors.primaryVariant),
+          borderSide: BorderSide(color: context.colors.primary),
         ),
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: context.colors.primary),
@@ -123,7 +124,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
           maximumSize: const Size.fromHeight(50),
           minimumSize: Size(context.screenWidth, 50),
           onPrimary: context.colors.primary,
-          primary: context.colors.primaryVariant),
+          primary: context.colors.primary),
       onPressed: resetPassword,
       icon: const Icon(Icons.send),
       label: LocaleText(

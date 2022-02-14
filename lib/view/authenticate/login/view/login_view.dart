@@ -1,3 +1,4 @@
+// ignore: implementation_imports
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
@@ -147,9 +148,8 @@ class LoginView extends StatelessWidget {
       );
 
   Widget buildSmallButton(BuildContext context, LoginViewModel viewModel) {
-    final color = viewModel.isDone
-        ? context.colors.primaryVariant
-        : context.colors.secondaryVariant;
+    final color =
+        viewModel.isDone ? context.colors.primary : context.colors.secondary;
 
     return Container(
       decoration: BoxDecoration(
@@ -164,7 +164,7 @@ class LoginView extends StatelessWidget {
                 color: Colors.white,
               )
             : CircularProgressIndicator(
-                backgroundColor: context.colors.primaryVariant,
+                backgroundColor: context.colors.primary,
                 color: Colors.white,
               ),
       ),

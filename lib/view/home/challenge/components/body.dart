@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      context.colors.secondaryVariant,
+                      context.colors.secondary,
                       context.colors.onBackground,
                     ]),
               ),

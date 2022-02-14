@@ -11,7 +11,7 @@ class LocalNotificationService {
   static void initialize() {
     NavigationService navigation = NavigationService.instance;
 
-    final InitializationSettings initializationSettings =
+    const InitializationSettings initializationSettings =
         InitializationSettings(
             android: AndroidInitializationSettings("@mipmap/ic_launcher"));
     _notificationPlugin.initialize(initializationSettings,
@@ -25,7 +25,7 @@ class LocalNotificationService {
   static Future<void> display(RemoteMessage message) async {
     try {
       final id = DateTime.now().millisecondsSinceEpoch ~/ 1000;
-      final NotificationDetails notificationDetails = NotificationDetails(
+      const NotificationDetails notificationDetails = NotificationDetails(
         android: AndroidNotificationDetails(
           "battlelang",
           "battlelang channel",

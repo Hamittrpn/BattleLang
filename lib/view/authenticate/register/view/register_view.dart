@@ -1,3 +1,4 @@
+// ignore: implementation_imports
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
@@ -90,6 +91,7 @@ class _RegisterViewState extends State<RegisterView> {
           if (value != viewModel.passwordController.text) {
             return LocaleKeys.validations_password_not_match.tr();
           }
+          return null;
         },
       ),
     );
@@ -106,6 +108,7 @@ class _RegisterViewState extends State<RegisterView> {
         if (value == null || value.isEmpty) {
           return LocaleKeys.validations_password;
         }
+        return null;
       },
     );
   }
@@ -152,6 +155,7 @@ class _RegisterViewState extends State<RegisterView> {
           if (value == null || value.isEmpty) {
             return LocaleKeys.validations_surname.tr();
           }
+          return null;
         },
       ),
     );
@@ -170,6 +174,7 @@ class _RegisterViewState extends State<RegisterView> {
         if (value == null || value.isEmpty) {
           return LocaleKeys.validations_name.tr();
         }
+        return null;
       },
     );
   }
@@ -178,7 +183,7 @@ class _RegisterViewState extends State<RegisterView> {
       OutlinedButton(
         style: OutlinedButton.styleFrom(
           shape: const StadiumBorder(),
-          side: BorderSide(width: 1, color: context.colors.primaryVariant),
+          side: BorderSide(width: 1, color: context.colors.primary),
         ),
         child: FittedBox(
           child: LocaleText(
@@ -195,9 +200,8 @@ class _RegisterViewState extends State<RegisterView> {
       );
 
   Widget buildSmallButton(BuildContext context, RegisterViewModel viewModel) {
-    final color = viewModel.isDone
-        ? context.colors.primaryVariant
-        : context.colors.secondaryVariant;
+    final color =
+        viewModel.isDone ? context.colors.primary : context.colors.secondary;
 
     return Container(
       decoration: BoxDecoration(
@@ -212,7 +216,7 @@ class _RegisterViewState extends State<RegisterView> {
                 color: Colors.white,
               )
             : CircularProgressIndicator(
-                backgroundColor: context.colors.primaryVariant,
+                backgroundColor: context.colors.primary,
                 color: Colors.white,
               ),
       ),
@@ -225,7 +229,7 @@ class _RegisterViewState extends State<RegisterView> {
       labelText: name,
       prefixIcon: prefixIcon,
       enabledBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: context.colors.primaryVariant),
+        borderSide: BorderSide(color: context.colors.primary),
       ),
       focusedBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: context.colors.primary),

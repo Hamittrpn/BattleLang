@@ -74,7 +74,7 @@ class _AuthViewState extends State<AuthView>
                     left: isShowRegister ? -context.screenWidth * 0.76 : 0,
                     child: GestureDetector(
                       child: Container(
-                        color: context.colors.primaryVariant,
+                        color: context.colors.primary,
                         child: const LoginView(),
                       ),
                     ),
@@ -88,7 +88,7 @@ class _AuthViewState extends State<AuthView>
                         ? context.screenWidth * 0.12
                         : context.screenWidth * 0.88,
                     child: Container(
-                      color: context.colors.secondaryVariant,
+                      color: context.colors.secondary,
                       child: const RegisterView(),
                     ),
                   ),

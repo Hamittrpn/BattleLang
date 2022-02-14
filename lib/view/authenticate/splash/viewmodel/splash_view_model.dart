@@ -23,7 +23,6 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
   }
 
   Future<void> controlAppState() async {
-    await Future.delayed(const Duration(seconds: 2));
     navigation.navigateToPageClear(NavigationConstants.ON_BOARDING_VIEW, null);
   }
 

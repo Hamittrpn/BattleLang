@@ -33,7 +33,7 @@ class TitleWithCustomUnderline extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.only(right: context.normalValue / 4),
               height: 4,
-              color: context.colors.secondaryVariant.withOpacity(0.4),
+              color: context.colors.secondary.withOpacity(0.4),
             ),
           )
         ],
