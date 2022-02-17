@@ -1,5 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../../../core/constants/memory/cache_constant.dart';
+import '../../../../core/init/cache/cache_manager_interface.dart';
+import '../../../../core/init/cache/user_cache_manager.dart';
+import '../../auth/model/user_model.dart';
 import 'package:mobx/mobx.dart';
 import 'package:auto_route/auto_route.dart';
 
@@ -12,9 +16,13 @@ part 'login_view_model.g.dart';
 class LoginViewModel = _LoginViewModelBase with _$LoginViewModel;
 
 abstract class _LoginViewModelBase with Store, BaseViewModel {
+  late final ICacheManager<UserModel> cacheManager;
+
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   GlobalKey<FormState> formState = GlobalKey();
+
+  List<UserModel>? _users;
 
   @observable
   bool isStretched = false;
@@ -38,6 +46,8 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
 
   @override
   void init() {
+    cacheManager = UserCacheManager(CacheConstants.USER_CACHE);
+
     emailController = TextEditingController();
     passwordController = TextEditingController();
 
@@ -80,10 +90,27 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
 
   Future signIn() async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await cacheManager.init();
+
+      if (cacheManager.getValues()?.isNotEmpty ?? false) {
+        //Cache'te data dolu olduğu için oradan tekrar okuyabiliyorum. Tekrardan
+        //Api ile konuşmama gerek yok.
+        _users = cacheManager.getValues();
+      } else {
+        // Eğer cache manager'da data yoksa tekrardan api ile konuş ve
+        // data'yı o zaman tekrar al
+      }
+
+      UserCredential result =
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
+
+      // Api'den gelen dataları doldur
+      if (result.user != null) {
+        //await cacheManager.addItems(_users);
+      }
 
       state = ButtonStates.DONE;
       isDone = true;

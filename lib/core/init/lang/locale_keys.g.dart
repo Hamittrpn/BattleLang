@@ -1,6 +1,8 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-abstract class  LocaleKeys {
+// ignore_for_file: constant_identifier_names
+
+abstract class LocaleKeys {
   static const splash_welcome = 'splash.welcome';
   static const splash = 'splash';
   static const onboard_title1 = 'onboard.title1';
@@ -15,16 +17,19 @@ abstract class  LocaleKeys {
   static const auth_login_log_out = 'auth.login.log_out';
   static const auth_login = 'auth.login';
   static const auth_forgot_forgot_password = 'auth.forgot.forgot_password';
-  static const auth_forgot_enter_registered_mail = 'auth.forgot.enter_registered_mail';
+  static const auth_forgot_enter_registered_mail =
+      'auth.forgot.enter_registered_mail';
   static const auth_forgot_reset_password = 'auth.forgot.reset_password';
-  static const auth_forgot_passowrd_reset_mail_sent = 'auth.forgot.passowrd_reset_mail_sent';
+  static const auth_forgot_passowrd_reset_mail_sent =
+      'auth.forgot.passowrd_reset_mail_sent';
   static const auth_forgot = 'auth.forgot';
   static const auth = 'auth';
   static const validations_email = 'validations.email';
   static const validations_name = 'validations.name';
   static const validations_surname = 'validations.surname';
   static const validations_password = 'validations.password';
-  static const validations_password_not_match = 'validations.password_not_match';
+  static const validations_password_not_match =
+      'validations.password_not_match';
   static const validations = 'validations';
   static const general_name = 'general.name';
   static const general_surname = 'general.surname';
@@ -51,5 +56,4 @@ abstract class  LocaleKeys {
   static const settings_account_activity = 'settings.account_activity';
   static const settings_account_info = 'settings.account_info';
   static const settings = 'settings';
-
 }
