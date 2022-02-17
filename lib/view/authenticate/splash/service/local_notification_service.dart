@@ -1,8 +1,8 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:learn_language/core/init/navigation/router.gr.dart';
+
+import '../../../../core/init/navigation/router.gr.dart';
 
 class LocalNotificationService {
   static final _router = AppRouter();

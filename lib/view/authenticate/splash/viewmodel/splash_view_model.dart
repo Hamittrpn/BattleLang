@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mobx/mobx.dart';
 
 import '../../../../core/base/model/base_view_model.dart';
@@ -19,6 +20,8 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
 
   @override
   void init() {
+    Hive.initFlutter();
+
     _firebaseInit();
     controlAppState();
   }
