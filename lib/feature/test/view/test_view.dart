@@ -85,7 +85,7 @@ class _TestViewState extends State<TestView> {
               return Column(
                 children: [
                   ProductCard(model: state.selectItems?[index]),
-                  state.selectItems!.isNotEmpty &&
+                  state.selectItems!.isEmpty &&
                           index == state.selectItems!.length - 1
                       ? const LoadingCenter()
                       : const SizedBox.shrink(),
