@@ -13,20 +13,20 @@
 import 'package:auto_route/auto_route.dart' as _i13;
 import 'package:flutter/material.dart' as _i14;
 
-import '../../../view/authenticate/auth/view/auth_view.dart' as _i3;
-import '../../../view/authenticate/login/view/login_view.dart' as _i5;
-import '../../../view/authenticate/onboard/view/onboarding_view.dart' as _i2;
-import '../../../view/authenticate/register/view/forgor_password_view.dart'
+import '../../../feature/authenticate/auth/view/auth_view.dart' as _i3;
+import '../../../feature/authenticate/login/view/login_view.dart' as _i5;
+import '../../../feature/authenticate/onboard/view/onboarding_view.dart' as _i2;
+import '../../../feature/authenticate/register/view/forgor_password_view.dart'
     as _i6;
-import '../../../view/authenticate/register/view/register_view.dart' as _i4;
-import '../../../view/authenticate/register/view/verify_email_view.dart'
+import '../../../feature/authenticate/register/view/register_view.dart' as _i4;
+import '../../../feature/authenticate/register/view/verify_email_view.dart'
     as _i11;
-import '../../../view/authenticate/splash/view/splash_view.dart' as _i1;
-import '../../../view/home/challenge/view/challenges_view.dart' as _i9;
-import '../../../view/home/feed-details/view/feed_detail_view.dart' as _i10;
-import '../../../view/home/feed/view/feed_view.dart' as _i8;
-import '../../../view/home/home_view.dart' as _i7;
-import '../../../view/home/test/view/test_view.dart' as _i12;
+import '../../../feature/authenticate/splash/view/splash_view.dart' as _i1;
+import '../../../feature/home/challenge/view/challenges_view.dart' as _i9;
+import '../../../feature/home/feed-details/view/feed_detail_view.dart' as _i10;
+import '../../../feature/home/feed/view/feed_view.dart' as _i8;
+import '../../../feature/home/home_view.dart' as _i7;
+import '../../../feature/test/view/test_view.dart' as _i12;
 
 class AppRouter extends _i13.RootStackRouter {
   AppRouter([_i14.GlobalKey<_i14.NavigatorState>? navigatorKey])

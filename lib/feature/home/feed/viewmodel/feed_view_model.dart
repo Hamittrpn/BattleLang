@@ -5,8 +5,8 @@ import 'package:mobx/mobx.dart';
 import '../../../../core/base/model/base_view_model.dart';
 import '../../../../core/constants/navigation/navigation_constants.dart';
 import '../../../settings/view/settings_view.dart';
+import '../../../test/view/test_view.dart';
 import '../../challenge/view/challenges_view.dart';
-import '../../test/view/test_view.dart';
 import '../view/feed_view.dart';
 
 part 'feed_view_model.g.dart';

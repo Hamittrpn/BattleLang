@@ -1,7 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:learn_language/core/constants/memory/hive_type_constant.dart';
 
-import '../../../view/authenticate/auth/model/user_model.dart';
+import '../../../feature/authenticate/auth/model/user_model.dart';
+import '../../constants/memory/hive_type_constant.dart';
 import 'cache_manager_interface.dart';
 
 class UserCacheManager extends ICacheManager<UserModel> {

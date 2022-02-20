@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/extensions/context_extension.dart';
 import '../../../../core/utils/utils.dart';
-import '../../../home/test/view/test_view.dart';
 
 class VerifyEmailView extends StatefulWidget {
   const VerifyEmailView({Key? key}) : super(key: key);
@@ -64,7 +63,7 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
   @override
   Widget build(BuildContext context) {
     return isEmailVerified
-        ? const TestView()
+        ? const SizedBox()
         : Scaffold(
             appBar: AppBar(
               title: const Text('Verify Email'),

@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'core/constants/app/app_constants.dart';
 import 'core/init/lang/language_manager.dart';
 import 'core/init/notifier/provider_list.dart';
-import 'view/home/my_app.dart';
+import 'feature/home/my_app.dart';
 
 Future<void> main() async {
   await _init();
