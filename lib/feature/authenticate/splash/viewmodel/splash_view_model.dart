@@ -27,7 +27,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
   }
 
   Future<void> controlAppState() async {
-    context!.router.pushNamed(NavigationConstants.ON_BOARDING_VIEW);
+    context!.router.pushNamed(NavigationConstants.TEST_VIEW);
   }
 
   Future<void> _firebaseInit() async {

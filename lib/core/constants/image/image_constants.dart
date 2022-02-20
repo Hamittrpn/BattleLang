@@ -35,4 +35,6 @@ class ImageConstants {
   String toJpeg(String name) => "assets/image/$name.jpeg";
   String toSVG(String name) => "assets/svg/$name.svg";
   String toLottie(String name) => "assets/animation/$name.json";
+
+  String dummyImage = "https://picsum.photos/200/300";
 }
